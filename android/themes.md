@@ -1,6 +1,6 @@
+# Themes
 
 ## Full-screen Immersive Activity
-
 
 Step 1: Extend AppCompat Activity
 Step 2: In styles.xml, define a new theme

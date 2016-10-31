@@ -1,4 +1,6 @@
 
+# Location
+
 ## Registering app permissions
 
 Add one or both of these in `AndroidManifest.xml`:
@@ -10,15 +12,12 @@ Add one or both of these in `AndroidManifest.xml`:
 
 ## Manually Requesting Permissions
 
-1. Check for permissions
-
+1. Check for permissions. Note that `MY_FINE_LOCATION_ACCESS` is arbitrarily defined.
 ```java
 if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
     ActivityCompat.requestPermissions(thisActivity, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, MY_FINE_LOCATION_ACCESS);
 }
 ```
-
-*Note: `MY_FINE_LOCATION_ACCESS` is arbitrarily defined.
 
 2. Implement the callback from `thisActivity`
 
@@ -53,6 +52,7 @@ gpsLocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER)
 ```
 
 Notes:
+
 1. *`getLastKnownLocation` may return null*
 2. Returned value may be seconds to several weeks old.
 
@@ -65,4 +65,5 @@ locationManager.requestSingleUpdate(LocationManager.GPS_PROVIDER, gpsListener, n
 ```
 
 Notes:
+
 1. This snippet will run sychdronously on the main thread.

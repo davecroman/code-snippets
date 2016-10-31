@@ -66,4 +66,4 @@ locationManager.requestSingleUpdate(LocationManager.GPS_PROVIDER, gpsListener, n
 
 Notes:
 
-1. This snippet will run sychdronously on the main thread.
+1. This snippet will run sychronously on the main thread.

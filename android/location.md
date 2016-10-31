@@ -1,22 +1,28 @@
-=============================
-Registering app permissions
-=============================
 
+## Registering app permissions
+
+Add one or both of these in `AndroidManifest.xml`:
+
+```xml
 <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+```
 
-=============================
-Manually Requesting Permissions
-=============================
+## Manually Requesting Permissions
 
-```java
 1. Check for permissions
 
+```java
 if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
     ActivityCompat.requestPermissions(thisActivity, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, MY_FINE_LOCATION_ACCESS);
 }
+```
 
-2. Implement the callback
+*Note: `MY_FINE_LOCATION_ACCESS` is arbitrarily defined.
+
+2. Implement the callback from `thisActivity`
+
+```java
 @Override
 public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
 
@@ -34,9 +40,7 @@ public void onRequestPermissionsResult(int requestCode, @NonNull String[] permis
 }
 ```
 
-=============================
-Get last known location
-=============================
+## Getting the last known location
 
 ```java
 LocationManager locationManager = (LocationManager) getSystemService.LOCATION_SERVICE);
@@ -48,3 +52,17 @@ Location gpsLocation;
 gpsLocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
 ```
 
+Notes:
+1. *`getLastKnownLocation` may return null*
+2. Returned value may be seconds to several weeks old.
+
+## Request for current location
+
+```java
+LocationManager locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
+
+locationManager.requestSingleUpdate(LocationManager.GPS_PROVIDER, gpsListener, null);
+```
+
+Notes:
+1. This snippet will run sychdronously on the main thread.

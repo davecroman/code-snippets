@@ -1,4 +1,3 @@
-
 ## Create a local branch
 
 ```bash
@@ -9,7 +8,6 @@ git branch crazy-experiment
 
 ```bash
 git checkout <branch-name>
-
 ```
 
 ## Checkout a remote branch

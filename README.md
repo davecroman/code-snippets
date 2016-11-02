@@ -1,4 +1,4 @@
-# code-snippets
+# dev-notes
 
 ## What is this?
 

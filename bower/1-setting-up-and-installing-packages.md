@@ -23,7 +23,29 @@ bower install <package-name> --save
 
 For a dev-only dependecy, use `--save-dev` instead of `--save`
 
-### Installing a specific version
+### Install options
+
+#### Installing from a local git repository
+
+```bash
+bower install <path-to-local-repo>
+```
+
+Similarly, you can remove the same package using the `uninstall` command by its folder name.
+
+#### Installing a specific file from the web
+
+```bash
+bower install <url-to-file>
+```
+
+#### Installing all dependencies from `bower.json` excluding dev dependencies
+
+```bash
+bower install --production
+```
+
+#### Installing a specific version
 
 ```bash
 bower install <package-name>#<version-number>

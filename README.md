@@ -6,7 +6,13 @@ I know the concept. I know the algorithm. But every tool, language, and framewor
 
 Sometimes, I need a quick reference. Sometimes, I need to just get things done. Sometimes, I'm better off with a bit of order in a world of chaos.
 
-Hence this collection of snippets.
+Hence this collection of notes I mustered over the course of my life as a young developer.
+
+## What is this not?
+
+1. This is not a collection of development documentations.
+2. This is not absolute truth.
+3. This is not complete.
 
 ## Contributing
 

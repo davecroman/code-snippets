@@ -1,3 +1,5 @@
+# Setting up and installing packages
+
 ## Installing `bower`
 
 ```bash
@@ -12,6 +14,14 @@ bower install <package-name>
 ```
 
 This will install the latest version of the specified package. If the package has already been installed, this command will replace that package with the latest version.
+
+If you wish to add this package to your project's declared dependencies via `bower.json`, just add the flag `--save`
+
+```bash
+bower install <package-name> --save
+```
+
+For a dev-only dependecy, use `--save-dev` instead of `--save`
 
 ### Installing a specific version
 
@@ -53,3 +63,5 @@ bower search <keyword-to-search>
 ```bash
 bower uninstall <package-name>
 ```
+
+To remove this package from the declared dependencies in `bower.json`, just add the `--save` flag.

@@ -17,7 +17,7 @@ bower cache clean
 ## Force install a package from the cache folder
 
 ```bash
-bower install <package-name> -o
+bower install <package-name> --o
 ```
 
 `-o` stands for offline mode

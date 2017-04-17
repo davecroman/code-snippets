@@ -13,4 +13,4 @@ Examples:
 git remote add origin https://github.com/asda/asdasdasdasdad.git
 ```
 
-You can use the `ssh` URL in place of the HTTPS to use SSH protocol.
+You can use the SSH URL in place of the HTTPS one to use SSH protocol.

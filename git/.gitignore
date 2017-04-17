@@ -1,0 +1,8 @@
+# This is only a sample .gitignore file. Some sections may not be relevant to the codebase you are working on. Choose with discretion
+
+# IntelliJ
+.idea/
+
+# Gradle
+.gradle
+/build/
